@@ -4,7 +4,7 @@ const mokenJson = require('../contracts/moken.json');
 const MokenContract = () => {
 	const { MOKEN_ADDRESS, MNEMONIC } = process.env;
 
-	const provider = new ethers.JsonRpcProvider('https://celo-alfajores.infura.io/v3/3a875265268f48ca90c24be81622f718');
+	const provider = new ethers.JsonRpcProvider('https://rpc-evm-sidechain.xrpl.org');
 
 	const mnemonic = ethers.Mnemonic.fromPhrase(MNEMONIC);
 	const wallet = ethers.HDNodeWallet.fromMnemonic(mnemonic);
